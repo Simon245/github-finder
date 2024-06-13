@@ -1,6 +1,4 @@
-import React from 'react';
-
-function Footer({}) {
+function Footer() {
   const footerYear = new Date().getFullYear();
   return (
     <footer className="footer p-10 bg-gray-700 text-neutral-content footer-center">
