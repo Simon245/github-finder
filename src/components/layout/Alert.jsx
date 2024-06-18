@@ -3,7 +3,7 @@ import AlertContext from '../../context/alert/AlertContext';
 
 function Alert() {
   const { alert } = useContext(AlertContext);
-  console.log(alert);
+
   return (
     alert !== null && (
       <div className="flex items-center space-x-2 mb-0 absolute top-4 right-4 bg-red-600 p-4 rounded w-72">
