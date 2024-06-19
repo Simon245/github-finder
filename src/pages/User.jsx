@@ -6,12 +6,10 @@ import Spinner from '../components/layout/Spinner';
 import RepoList from '../components/repos/RepoList';
 
 function User() {
-  const { getUser, user, loading, getUserRepos, repos } =
-    useContext(GithubContext);
+  const { user, loading, repos, getUserAndRepos } = useContext(GithubContext);
   const params = useParams();
   useEffect(() => {
-    getUser(params.login);
-    getUserRepos(params.login);
+    getUserAndRepos(params.login);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
