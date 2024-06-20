@@ -5,4 +5,8 @@ module.exports = {
     extend: {},
   },
   plugins: [require('daisyui')],
+  daisyui: {
+    themes: ['winter', 'dracula'],
+  },
+  darkMode: ['selector', '[data-theme="dracula"]'],
 };
