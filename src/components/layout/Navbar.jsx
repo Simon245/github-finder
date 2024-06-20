@@ -13,10 +13,6 @@ function Navbar({ title = 'Github Finder' }) {
   );
 
   useEffect(() => {
-    updateTheme();
-  }, [theme]);
-
-  const updateTheme = () => {
     // add custom data-theme attribute to html tag required to update theme using DaisyUI
     const daisyThemeName = theme === 'dark' ? 'dracula' : 'winter';
     document.querySelector('html').setAttribute('data-theme', daisyThemeName);
@@ -25,7 +21,7 @@ function Navbar({ title = 'Github Finder' }) {
     } else {
       document.documentElement.classList.remove('dark');
     }
-  };
+  }, [theme]);
 
   // update state on toggle
   const handleThemeToggle = (e) => {
@@ -61,8 +57,8 @@ function Navbar({ title = 'Github Finder' }) {
               onClick={handleThemeToggle}
               className="btn btn-ghost btn-sm"
             >
-              {theme === 'dark' && <FaMoon />}
-              {theme === 'light' && <FaSun />}
+              {theme === 'dark' && <FaSun />}
+              {theme === 'light' && <FaMoon />}
             </button>
           </div>
         </div>
